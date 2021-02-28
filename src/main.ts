@@ -16,8 +16,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-function bootstrapModule(b: boolean = window.WebComponents.ready = true) {
-  b;
+function bootstrapModule() {
   platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
 }
@@ -27,5 +26,5 @@ if (window.WebComponents.ready) {
   bootstrapModule();
 } else {
   // Wait for polyfills to load
-  // window.addEventListener('WebComponentsReady', bootstrapModule());
+   window.addEventListener('WebComponentsReady', bootstrapModule);
 }
