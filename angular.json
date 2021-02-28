@@ -129,7 +129,7 @@
   "defaultProject": "perspective-angular",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "less"
+      "style": "less"
     }
   }
 }
