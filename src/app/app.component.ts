@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {HTMLPerspectiveViewerElement} from "@finos/perspective-viewer";
 import perspective, {PerspectiveWorker} from "@finos/perspective";
 import "@finos/perspective-viewer";
@@ -13,7 +13,6 @@ import "@finos/perspective";
   styleUrls: ['./app.component.less'],
 })
 export class AppComponent implements OnInit {
-
   private worker: PerspectiveWorker;
   private reader: FileReader;
   private file: File = null;

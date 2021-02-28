@@ -27,5 +27,5 @@ if (window.WebComponents.ready) {
   bootstrapModule();
 } else {
   // Wait for polyfills to load
-  window.addEventListener('WebComponentsReady', bootstrapModule);
+  // window.addEventListener('WebComponentsReady', bootstrapModule());
 }
