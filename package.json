@@ -1,13 +1,14 @@
 {
   "name": "perspective-angular-example",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "eslint --ext .jsx,.js,.tsx,.ts --max-warnings 0 ./src/app",
-    "e2e": "ng e2e"
+    "build": "ng build"
+  },
+  "exports": {
+    "./*": "./*",
+    "./": "./"
   },
   "private": true,
   "dependencies": {
@@ -32,34 +33,20 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.2",
-    "@angular-eslint/builder": "1.2.0",
-    "@angular-eslint/eslint-plugin": "1.2.0",
-    "@angular-eslint/eslint-plugin-template": "1.2.0",
-    "@angular-eslint/schematics": "1.2.0",
-    "@angular-eslint/template-parser": "1.2.0",
     "@angular/cli": "~11.2.2",
     "@angular/compiler-cli": "~11.2.3",
     "@angular/language-service": "~11.2.3",
-    "@types/jasmine": "~3.5.0",
-    "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "@typescript-eslint/eslint-plugin": "2.34.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^3.10.1",
-    "@typescript-eslint/parser": "2.34.0",
     "@webcomponents/webcomponentsjs": "^2.5.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jasmine": "^4.1.2",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.2",
-    "karma": "~6.1.1",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
-    "karma-jasmine": "~4.0.1",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.1.5",
     "webpack-cli": "^3.3.11"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 0.5%",
+    "Firefox ESR",
+    "not dead",
+    "not IE 9-11"
+  ]
 }

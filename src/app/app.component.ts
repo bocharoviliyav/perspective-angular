@@ -4,7 +4,6 @@ import perspective, {PerspectiveWorker} from '@finos/perspective';
 import '@finos/perspective-viewer';
 import '@finos/perspective-viewer-hypergrid';
 import '@finos/perspective-viewer-datagrid';
-import '@finos/perspective-viewer-d3fc';
 import '@finos/perspective';
 
 @Component({
@@ -28,11 +27,8 @@ export class AppComponent {
     this.reader.onloadend = (): void => {
 
       const viewer: HTMLPerspectiveViewerElement = document.getElementsByTagName('perspective-viewer')[0] as HTMLPerspectiveViewerElement;
-
-
       const table = this.worker.table(this.reader.result);
 
-      // table.view().to_csv().then(a => console.log(a))
       viewer.load(table);
       viewer.toggleConfig();
       viewer.editable = true;

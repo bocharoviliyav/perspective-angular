@@ -4,7 +4,7 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist/out-tsc/app",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -16,10 +16,18 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "types": []
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
 }
